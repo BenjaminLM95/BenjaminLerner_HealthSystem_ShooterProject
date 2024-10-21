@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 public class Player : Actor {
     public static Player instance;
@@ -13,8 +14,7 @@ public class Player : Actor {
 
     
     public void Awake() {
-        instance = this;
-        
+         instance = this;        
     }
 
     public override void Die()
@@ -59,4 +59,10 @@ public class Player : Actor {
         desiredDirectionShot.y = 0.0f;
         return desiredDirectionShot.normalized;
     }
+
+      
+
 }
+
+
+

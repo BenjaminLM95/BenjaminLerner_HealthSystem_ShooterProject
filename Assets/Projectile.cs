@@ -8,6 +8,8 @@ public class Projectile : MonoBehaviour
     public float speed = 10.0f;
     public int damageAmount = 30;
     public float lifeTime = 20.0f;
+        
+
     private void Update()
     {
         transform.position += transform.forward * speed * Time.deltaTime;
