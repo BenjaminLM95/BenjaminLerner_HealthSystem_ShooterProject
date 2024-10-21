@@ -31,6 +31,9 @@ public class HealthSystem
     {
         // Implement damage logic
         //Get the player o enemy current hp, decrease that hp with the damage and return with the updated hp
+        if (damage < 0) { damage = 0; }
+
+
        if(shield > 0) 
         {
             if(shield < damage) 
@@ -56,6 +59,8 @@ public class HealthSystem
     {
         // Implement healing logic
         //Get the player current hp, increase that hp with the heal ammount and return with the updated hp
+        if (hp < 0) { hp = 0; } 
+
         health = health + hp;
         if (health > 100) { health = 100; }
 
@@ -65,6 +70,8 @@ public class HealthSystem
     {
         // Implement shield regeneration logic
         //Get the player shield hp, increase that shield hp with the heal ammount and return with the updated shield hp
+        if (hp < 0) { hp = 0; }
+
         shield = shield + hp;
         if (shield > 100) { shield = 100; }
     }
